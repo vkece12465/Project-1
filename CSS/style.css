@@ -1,0 +1,172 @@
+nav{
+    display:block;
+}
+nav .nav-items{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    margin-top: -90px;
+    margin-left: 300px;
+    margin-right: 250px;
+    padding: 2px;
+    font-size: 25px;
+    font-family: orbitron;
+    cursor: pointer;
+}
+
+div .brand-logo{
+    padding: 40px;
+    margin: auto;
+}
+div .button-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    margin:-60px 30px 0px 80px;
+}
+li{
+    padding-bottom: 5px;
+    background: linear-gradient(0deg, currentcolor, currentcolor) bottom center no-repeat;
+    background-size: 0px 3px;
+    transition: 0.5s;
+    text-decoration: none;
+}
+li.list-item:hover{
+background-size:100% 3px;
+color:black;
+font-size: 28px;
+font-weight: 500;
+}
+
+.nav-button{
+    display: block;
+    padding: 10px 50px;
+    margin-left: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 20px;
+    
+}
+.square-icon{
+    position: absolute;
+    width: 24%;
+    margin:15% ;
+    margin-left: 120px;
+}
+
+.star-icon{
+    position: absolute;
+    margin: 60px 90%;
+    width: 40px;
+}
+.person{
+position: absolute;
+margin: 20px 5px 0px 30px;
+max-width: 26%;
+}
+.globe-icon{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    margin-left: 59%;
+    width: 45px;
+}
+.hero-container-right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    margin: 80px 10px 10px 100px ;
+    height: 400px;
+    max-width: 90%;
+}
+h1.hero-heading{
+    display: flex;
+    font-size: 60px;
+    font-family:orbitron;
+    position: absolute;
+    padding: 10px;
+    margin-right:-28%;
+}
+p.hero-description{
+    display: flex;
+    width: 50%;
+    position: relative;
+    padding: 10px;
+    margin-top:150px;
+    margin-left: 300px;
+    color: gray;
+    font-family: poppins;
+}
+div .btn-group{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.button-email{
+margin-top: 15px;
+left: 70px;
+padding:5px 30px;
+background: transparent;
+border-radius: 10px;
+font-size: 20px;
+color: gray;
+border: 3px solid gray;
+font-family: orbitron;
+font-weight: 600;
+
+
+}
+.button-join{
+    position: absolute;
+    top: 74.6%;
+    margin-left: 31%;
+    font-size: 20px;
+    border-radius: 10px;
+    background-color: black;
+    font-family: orbitron;
+    padding: 4px 10px;
+    color: rgb(255, 255, 255);
+    cursor:pointer
+}
+.contact-heading{
+    display: block;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    top: 40px;
+    left: 220px;
+    color: gray;
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-family: poppins;
+}
+.icons{
+    display: inline-block;
+    position: relative;
+    top: 15px;
+    left: 130px;
+}
+.icons, img{
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+} 
+.star-icon-1{
+    display: flex;
+    position: absolute;
+    width: 35px;
+    margin-top: -110px;
+    margin-left: -80%;
+}
+
+
+
+
