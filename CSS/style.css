@@ -1,172 +1,366 @@
-nav{
-    display:block;
+* {
+    padding: 0;
+    margin: 0;
 }
-nav .nav-items{
+body {
+    font-family: "Orbitron", serif;
+    overflow-y: hidden;
+}
+.container {
+    max-width: 75rem;
+    margin: 0 auto;
+}
+
+
+.navbar-container {
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     justify-content: space-between;
-    list-style-type: none;
+    height: 20vh;
     align-items: center;
-    margin-top: -90px;
-    margin-left: 300px;
-    margin-right: 250px;
-    padding: 2px;
-    font-size: 25px;
-    font-family: orbitron;
+}
+.navbar-container div:first-child img {
+    width: 120px;
+}
+
+.navbar-container .list {
+    display: flex;
+    list-style-type: none;
+    font-family: "Orbitron";
+    font-size: 20px;
+    font-weight: 500;
+}
+.navbar-container .list .list-item {
     cursor: pointer;
 }
-
-div .brand-logo{
-    padding: 40px;
-    margin: auto;
+.navbar-container .list .list-item:not(:last-child) {
+    margin-right: 40px;
 }
-div .button-group{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    margin:-60px 30px 0px 80px;
+.navbar-container .list .list-item:not(:first-child) {
+    font-size: 18px;
 }
-li{
-    padding-bottom: 5px;
-    background: linear-gradient(0deg, currentcolor, currentcolor) bottom center no-repeat;
-    background-size: 0px 3px;
-    transition: 0.5s;
-    text-decoration: none;
+.navbar-container .list .list-item:nth-child(1) {
+    font-weight: 800;
 }
-li.list-item:hover{
-background-size:100% 3px;
-color:black;
-font-size: 28px;
-font-weight: 500;
-}
-
-.nav-button{
+.navbar-container .list .list-item:nth-child(1)::after {
+    content: " ";
     display: block;
-    padding: 10px 50px;
-    margin-left: 15px;
-    border: 2px solid black;
-    border-radius: 10px;
-    background: transparent;
-    font-size: 20px;
-    
+    height: 2px;
+    width: 80%;
+    background-color: #000000;
+    margin: 0 auto;
 }
-.square-icon{
-    position: absolute;
-    width: 24%;
-    margin:15% ;
-    margin-left: 120px;
+.navbar-container .button-group {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.navbar-container .nav-button {
+    padding: 7px 40px;
+    border: 3px solid #000000;
+    border-radius: 14px;
+    background-color: #FFFFFF;
+    margin-left: 20px;
+    cursor: text;
+}
+.navbar-container .search-icon {
+    padding-top: 8px;
 }
 
-.star-icon{
+@media only screen and (max-width: 1174px) {
+    .container {
+        max-width: 65rem;
+    }
+    .navbar-container .list {
+        font-size: 16px;
+    }
+    .navbar-container .list .list-item:not(:first-child) {
+        font-size: 14px;
+    }
+    .navbar-container .nav-button {
+        padding: 5px 30px;
+        margin-left: 5px;
+    }
+}
+@media only screen and (max-width: 666px) {
+    .navbar-container {
+        width: auto;
+        height: 15vh;
+        overflow-x: scroll !important;
+    }
+    .navbar-container .list .list-item:first-child {
+        margin-left: 40px;
+    }
+    .navbar-container div:first-child img {
+        width: 100px;
+    }
+
+    .navbar-container .search-icon {
+        margin-right: 8px;
+        margin-left: 40px;
+    }
+
+}
+@media only screen and (max-width: 770px) {
+    .navbar-container {
+        height: 14vh;
+    }
+}
+
+
+
+.hero-container {
+    display: flex;
+    position: relative;
+    height: 80vh;
+}
+.hero-container .square > img {
+    position: relative;
+    width: 320px;
+    top: 225px;
+    left: 146px;
+}
+.hero-container .star {
     position: absolute;
-    margin: 60px 90%;
+    right: 0;
+}
+.hero-container .star img {
     width: 40px;
 }
-.person{
-position: absolute;
-margin: 20px 5px 0px 30px;
-max-width: 26%;
-}
-.globe-icon{
+.hero-container .star:nth-child(2) {
     position: absolute;
-    align-items: center;
-    justify-content: center;
-    margin-left: 59%;
-    width: 45px;
+    right: 640px;
+    top: 490px;
 }
-.hero-container-right{
+.hero-container .star:nth-child(2) img {
+    width: 30px;
+}
+.hero-container .globe {
+    position: absolute;
+    left: 680px;
+    top: -20px;
+}
+.hero-container .globe img {
+    width: 50px;
+}
+.hero-container span + div {
+    width: 220px;
+}
+.hero-container .globe + div > img {
+    position: absolute;
+    width: 390px;
+    left: 12px;
+    top: 14px;
+}
+.hero-container-right {
+    width: 890px;
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    position: absolute;
-    margin: 80px 10px 10px 100px ;
-    height: 400px;
-    max-width: 90%;
+    margin-top: 70px;
 }
-h1.hero-heading{
-    display: flex;
-    font-size: 60px;
-    font-family:orbitron;
-    position: absolute;
-    padding: 10px;
-    margin-right:-28%;
+.hero-container-right .hero-heading {
+    font-size: 3.2rem;
+    margin-bottom: 50px;
 }
-p.hero-description{
-    display: flex;
-    width: 50%;
-    position: relative;
-    padding: 10px;
-    margin-top:150px;
-    margin-left: 300px;
-    color: gray;
-    font-family: poppins;
+.hero-container-right .hero-description {
+    color: #8a8989;
+    font-size: 15px;
+    max-width: 600px;
+    text-align: center;
+    margin-bottom: 90px;
 }
-div .btn-group{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
 
-
-}
-.button-email{
-margin-top: 15px;
-left: 70px;
-padding:5px 30px;
-background: transparent;
-border-radius: 10px;
-font-size: 20px;
-color: gray;
-border: 3px solid gray;
-font-family: orbitron;
-font-weight: 600;
-
-
-}
-.button-join{
-    position: absolute;
-    top: 74.6%;
-    margin-left: 31%;
-    font-size: 20px;
+.hero-container-right .button-email {
+    font-family: "Orbitron";
+    padding: 5px 30px;
     border-radius: 10px;
-    background-color: black;
-    font-family: orbitron;
-    padding: 4px 10px;
-    color: rgb(255, 255, 255);
-    cursor:pointer
+    background-color: #FFFFFF;
+    cursor: pointer;
 }
-.contact-heading{
-    display: block;
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    top: 40px;
-    left: 220px;
-    color: gray;
-    font-size: 20px;
-    letter-spacing: 1px;
-    font-family: poppins;
+.hero-container-right .button-join {
+    font-family: "Orbitron";
+    padding: 5px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #FFFFFF;
+    margin-left: 10px;
+    cursor: pointer;
+    margin-bottom: 110px;
 }
-.icons{
-    display: inline-block;
-    position: relative;
-    top: 15px;
-    left: 130px;
+.contact-heading {
+    text-align: center;
+    font-family: "Poppins";
+    color: #605e5e;
+    font-weight: 600;
+    padding-bottom: 12px;
 }
-.icons, img{
-    align-items: center;
-    justify-content: space-around;
-    padding: 10px;
-} 
-.star-icon-1{
-    display: flex;
-    position: absolute;
-    width: 35px;
-    margin-top: -110px;
-    margin-left: -80%;
+.icons > span > img {
+    width: 32px;
+    cursor: pointer;
+}
+.icons > span:not(:last-child) {
+    margin-right: 10px;
 }
 
+@media only screen and (max-width: 1174px) {
+    .hero-container-right .hero-heading {
+        font-size: 2.8rem;
+    }
+    .hero-container-right .hero-description {
+        font-size: 13px;
+    }
 
+    .hero-container .square > img {
+        position: relative;
+        width: 240px;
+        top: 225px;
+        left: 146px;
+    }
+    .hero-container .globe + div > img {
+        position: absolute;
+        width: 320px;
+        left: 19px;
+        top: 30px;
+    }
 
+}
+@media only screen and (max-width: 998px) {
+    .hero-container .globe {
+        display: none;
+    }
+    .hero-container-right .hero-heading {
+        font-size: 2.1rem;
+        margin-bottom: 25px;
+    }
+    .hero-container-right .hero-description {
+        font-size: 11px;
+        max-width: 450px;
+        margin-bottom:35px;
+    }
 
+    .hero-container .square > img {
+        position: relative;
+        width: 200px;
+        top: 170px;
+        left: 106px;
+    }
+    .hero-container .globe + div > img {
+        position: absolute;
+        width: 250px;
+        left: 19px;
+        top: 30px;
+    }
+    .hero-container-right .button-email {
+        font-family: "Orbitron";
+        padding: 4px 20px;
+        font-size: .7rem;
+        font-weight: 500;
+    }
+    .hero-container-right .button-join {
+        font-family: "Orbitron";
+        padding: 4px;
+        font-size: .7rem;
+        margin-bottom: 50px;
+    }
+
+    .contact-heading {
+        font-size: .8rem;
+    }
+    .icons > span > img {
+        width: 22px;
+        cursor: pointer;
+    }
+
+}
+@media only screen and (max-width: 770px) {
+    .hero-container {
+        flex-direction: column;
+        top: -40px;
+        height: 80vh;
+        overflow: hidden;
+    }
+    .hero-container-right {
+        margin-top: 190px !important;
+    }
+    .hero-container-right .hero-heading {
+        font-size: 2.1rem;
+        margin-bottom: 20px;
+    }
+    .hero-container .star {
+        left: 40px;
+        top: 80px;
+    }
+    .hero-container .star:nth-child(2) {
+        left: 450px;
+        top: 298px;
+    }
+    .hero-container-right {
+        width: auto;
+        margin-top: 200px;
+    }
+    .hero-container .square > img {
+        position: relative;
+        width: 180px;
+        top: 180px;
+        left: 50%;
+    }
+    .hero-container .globe + div > img {
+        position: absolute;
+        width: 220px;
+        left: 30%;
+        top: 60px;
+    }
+    .hero-container-right .button-join {
+        margin-bottom: 20px;
+    }
+}
+@media only screen and (max-width: 450px) {
+
+    .hero-container {
+        flex-direction: column;
+        top: -40px;
+        height: 100vh;
+        padding: 0 10px;
+    }
+    .hero-container-right {
+        margin-top: 220px !important;
+    }
+    .hero-container-right .hero-heading {
+        font-size: 1.5rem;
+        margin-bottom: 25px;
+    }
+    .hero-container .star {
+        left: 40px;
+        top: 40px;
+    }
+    .hero-container-right {
+        width: auto;
+        margin-top: 200px;
+    }
+    .hero-container .square > img {
+        position: relative;
+        width: 180px;
+        top: 180px;
+        left: 40%;
+    }
+    .hero-container .globe + div > img {
+        position: absolute;
+        width: 220px;
+        left: 20%;
+        top: 60px;
+    }
+    .hero-container-right .button-join {
+        margin-bottom: 20px;
+    }
+    .hero-container .star {
+        left: 20px;
+        top: 70px;
+    }
+    .hero-container .star:nth-child(2) img {
+        width: 20px;
+    }
+    .hero-container .star:nth-child(2) {
+        left: 299px;
+        top: 368px;
+    }
+}

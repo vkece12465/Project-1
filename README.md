@@ -16,6 +16,7 @@
 ## Duration of complete this project
 
 -   Approx 6 hour taken to complete this first project and I am working as fulltime employee in non OT and I am working between night 7:30 to 11:00 PM.
+-   Now This Project is available in Mobile version also.
 
 ## **The website same as below image**
 
